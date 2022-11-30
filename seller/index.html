@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title> E-Commerce </title>
+</head>
+
+<body>
+
+    <nav class="nav_bar_home">
+        <div class="logo">
+            <img src="../img/logo.png" alt="">
+        </div>
+
+        <div class="search_bar">
+            <div class="input">
+                <input id="bar_input" type="text" placeholder="search products...">
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="seller"> <a href="#"> Seller </a> </button>
+            <button class="cart"> <a href="../customer/customer.html"> Cart</a> </button>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <button id="product-create" onclick="createProduct()"> New Product </button>
+
+        <div class="product_title">
+            <h1> Product Category </h1>
+        </div>
+
+        <div class="product_table">
+            <table>
+                <thead style="height: 10vh ; background: #e00ca4; color: aliceblue;">
+                    <tr>
+                        <th> Product Names </th>
+                        <th>Product Pictures </th>
+                        <th> Correncies </th>
+                        <th> Edit </th>
+                        <th >Delete </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- t_name -->
+                    <!-- t_picture -->
+                    <!-- t_currency -->
+                    <!-- t_edit -->
+                    <!-- t_delete -->
+
+
+                </tbody>
+            </table>
+           
+        </div>
+
+        <div id="dialog" style="display: none;">
+            <dialog open>
+                <header> Add Product </header>
+                <section>
+                    <label> Product Picture: </label>
+                    <input id="input_pic" type="text" placeholder= "Image product" />
+
+                    <label> Product Name: </label>
+                    <input id="input-name" type="text" placeholder="Name product"  />
+
+                    <label> Product Price: </label>
+                    <input id="input-price" type="text"  placeholder="Price product" />
+                </section>
+                <menu>
+                    <button onclick="Cancel()" id="cancel"> Cancel </button>
+                    <button onclick="createCard()" id="create"> Create </button>
+                    <button style="display :none ;" id="update"> Update </button>
+                </menu>
+            </dialog>
+        </div>
+
+    </div>
+
+</body>
+<script src="seller.js"></script>
+
+</html>

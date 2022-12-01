@@ -50,7 +50,6 @@ function renderProduct() {
     newTbody = document.createElement("tbody");
     newTbody.id = "tbody";
 
-
     for (let index = 0; index < listProducts.length; index++) {
         let newProduct = listProducts[index];
 
@@ -86,7 +85,9 @@ function renderProduct() {
         let img_delete = document.createElement("img");
         img_delete.className = "img-delete";
         img_delete.src = "../img/trash.png";
+
         img_delete.addEventListener("click", removeProduct)
+
         t_delete.appendChild(img_delete);
         tr.appendChild(t_delete);
 
@@ -99,7 +100,7 @@ function renderProduct() {
 
 
 function createProduct() {
-    document.querySelector("#create").textContent = "Create"
+    document.querySelector("#create").textContent = "Create";
     hide(dialog);
 
     let newListProduct = {};
@@ -131,13 +132,14 @@ function removeProduct(event) {
 }
 
 function editProduct(event) {
+    show(dialog);
     document.querySelector("#create").textContent = "Update"
     let index = event.target.parentElement.parentElement.dataset.index;
     console.log(index);
+
     document.querySelector("#input_pic").value = listProducts[index].img;
     document.querySelector("#input_name").value = listProducts[index].name;
     document.querySelector("#input_price").value = listProducts[index].price;
-    show(dialog);
     listProducts.splice(index, 1);
     saveProducts();
 }

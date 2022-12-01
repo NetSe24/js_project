@@ -47,7 +47,7 @@ function renderProduct() {
         product_name.textContent = "Name: ";
         strong_name = document.createElement("strong");
         strong_name.textContent = newProduct.name;
-        strong_name.style.color = "orange";
+        strong_name.style.color = "black";
         product_name.appendChild(strong_name);
         card.appendChild(product_name);
 
@@ -55,7 +55,7 @@ function renderProduct() {
         currency.className = "currency";
         currency.textContent = "Price: ";
         strong_currency = document.createElement("strong");
-        strong_currency.style.color = "orange";
+        strong_currency.style.color = "black";
         strong_currency.textContent = newProduct.price;
         currency.appendChild(strong_currency);
         card.appendChild(currency);
@@ -65,6 +65,7 @@ function renderProduct() {
         let btn_add = document.createElement("button");
         div_button.appendChild(btn_add);
         btn_add.className = "btn_add";
+        btn_add.addEventListener("click",cartBuyer) // click on the add button
         btn_add.textContent = "  BUY NOW ! ";
         card.appendChild(div_button);
 
@@ -85,7 +86,37 @@ function renderProduct() {
 
 }
 
+let dialog_cart_container = document.querySelector(".dialog_cart");
+let dialog_cart = document.querySelector("#dialog_cart");
 
 
+let cartBuyer = (element) => {
+   console.log(dialog_cart_container.style.display = "block")
+    
+}
+cartBuyer()
+
+let searchBar = () => {
+    var search_card_container = document.querySelector("#card_container");
+    var search_card = document.querySelectorAll(".card");
+    let p = document.getElementsByTagName("p");
+    var search_box = document.querySelector("#bar_input").value.toUpperCase();
+    for (let i = 0; i < search_card.length; i++) {
+        let search = search_card[i].getElementsByTagName("p")[0];
+        // console.log(search)
+        if(search){
+            let p   = search.textContent || search.innerHTML ;
+            if (p.toUpperCase().indexOf(search_box) > -1){
+                search_card[i].style.display = "";
+            }
+            else{
+                search_card[i].style.display = "none";
+            }
+        }
+    }
+}
+
+
+// saveProducts();
 loadProducts();
 renderProduct();

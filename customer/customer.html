@@ -7,34 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title> E-Commerce Customer Page </title>
 </head>
 
 <body>
 
-    <nav class="nav_bar_home" >
+    <nav class="nav_bar_home">
         <div class="logo">
             <img src="../img/logo.png" alt="">
         </div>
 
         <div class="search_bar">
             <div class="input">
-                <input id="bar_input" type="text" placeholder="search products...">
+                <input id="bar_input" type="text" placeholder="search product prices ..." onkeyup="searchBar()">
             </div>
         </div>
 
         <div class="button">
             <button class="seller" style=" display:none; "> <a href="../seller/index.html"> Seller </a> </button>
-            <button class="cart"> <a href="#"> Cart</a> </button>
+            <button class="cart" style="display: none;"> <a href="#"> Cart</a> </button>
+            <button class="cart_add_product"> <a href=""> Cart <i
+                        class="material-icons">add_shopping_cart</i></a></button>
         </div>
     </nav>
 
-    <div class="customer-product" style="display: flex; justify-content:center; padding-top:3.5rem;">
-        <h1> All Products </h1>
-    </div>
-    <div id="card_container" >
+    <div class="card_dialog">
 
     </div>
+    <div class="customer-product" style="display: flex; justify-content:center; padding-top:3.5rem;">
+        <h1 class="all_product"> All Products </h1>
+    </div>
+    <div id="card_container">
+
+    </div>
+    <!-- <div class="dialog_cart"  style="display: none;">
+        <dialog id="dialog_cart" open>
+            <header class="header"> Add Product </header>
+            <section class="section">
+                <label class="l1"> Product Picture: </label>
+                <input id="" type="text" placeholder="Image product (url)" />
+
+                <label> Product Name: </label>
+                <input id="" type="text" placeholder="Name product" />
+
+                <label> Product Price: </label>
+                <input id="" type="text" placeholder="Price product" />
+            </section>
+        </dialog>
+    </div> -->
+
+  
 </body>
 <script src="customer.js"></script>
 

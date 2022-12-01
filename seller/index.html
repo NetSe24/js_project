@@ -17,11 +17,11 @@
             <img src="../img/logo.png" alt="">
         </div>
 
-        <div class="search_bar">
+        <!-- <div class="search_bar">
             <div class="input">
                 <input id="bar_input" type="text" placeholder="search products...">
             </div>
-        </div>
+        </div> -->
 
         <div class="button">
             <button class="seller"> <a href="#"> Seller </a> </button>
@@ -32,7 +32,7 @@
 
     <div class="container">
 
-        <button id="product-create" onclick="createProduct()"> New Product </button>
+        <button id="product-create" onclick="addProduct()"> New Product </button>
 
         <div class="product_title">
             <h1> Product Category </h1>
@@ -49,7 +49,8 @@
                         <th >Delete </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
+                    
                     <!-- t_name -->
                     <!-- t_picture -->
                     <!-- t_currency -->
@@ -67,18 +68,18 @@
                 <header> Add Product </header>
                 <section>
                     <label> Product Picture: </label>
-                    <input id="input_pic" type="text" placeholder= "Image product" />
+                    <input id="input_pic" type="text" placeholder= "Image product (url)" />
 
                     <label> Product Name: </label>
-                    <input id="input-name" type="text" placeholder="Name product"  />
+                    <input id="input_name" type="text" placeholder="Name product"  />
 
                     <label> Product Price: </label>
-                    <input id="input-price" type="text"  placeholder="Price product" />
+                    <input id="input_price" type="text"  placeholder="Price product" />
                 </section>
+
                 <menu>
                     <button onclick="Cancel()" id="cancel"> Cancel </button>
-                    <button onclick="createCard()" id="create"> Create </button>
-                    <button style="display :none ;" id="update"> Update </button>
+                    <button onclick="createProduct()" id="create"> Create </button>
                 </menu>
             </dialog>
         </div>

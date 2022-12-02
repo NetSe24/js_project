@@ -24,8 +24,8 @@
         </div> -->
 
         <div class="button">
-            <button class="seller"> <a href="#"> Seller </a> </button>
-            <button class="cart"> <a href="../customer/customer.html"> Cart </a> </button>
+            <button class="seller"> <a href="#"> Seller Arrange </a> </button>
+            <button class="cart"> <a href="../customer/customer.html"> Shop Now  </a> </button>
         </div>
     </nav>
 
@@ -44,7 +44,7 @@
                     <tr>
                         <th> Product Names </th>
                         <th>Product Pictures </th>
-                        <th> Currencies ( $ ៛ ¥ £ €) </th>
+                        <th> Currency ($) </th>
                         <th> Edit </th>
                         <th>Delete </th>
                     </tr>
@@ -64,22 +64,22 @@
         </div>
 
         <div id="dialog" style="display: none;">
-            <dialog open>
-                <header > Add Product </header>
-                <section >
-                    <label > Product Picture: </label>
-                    <input id="input_pic" type="text" placeholder="Image product (url)" />
+            <dialog class = "dialog_add" open>
+                <header class="header_add" > Add Product  <i class="material-icons"> shopping_cart </i></header>
+                <section class="section_add">
+                    <label class="label_add"> Product Picture: </label>
+                    <input  id="input_pic" type="text" required placeholder="Image product (url)"  >
 
-                    <label> Product Name: </label>
-                    <input id="input_name" type="text" placeholder="Name product" />
+                    <label class="label_add"> Product Name: </label>
+                    <input class="input_add" id="input_name" type="text" placeholder="Name product" required>
 
-                    <label> Product Price: </label>
-                    <input id="input_price" type="text" placeholder="Price product" />
+                    <label class="label_add"> Product Price : </label>
+                    <input class="input_add" id="input_price" type="text" placeholder="Price product" required>
                 </section>
 
-                <menu>
-                    <button onclick="Cancel()" id="cancel"> Cancel </button>
-                    <button onclick="createProduct()" id="create"> Create </button>
+                <menu class="menu_add">
+                    <button id="cancel" onclick = "Cancel()" > Cancel </button>
+                    <button id="create" onclick = "createProduct()" > Create </button>
                 </menu>
             </dialog>
         </div>

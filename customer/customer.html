@@ -25,10 +25,11 @@
         </div>
 
         <div class="button">
+
             <button class="seller" style=" display:none; "> <a href="../seller/index.html"> Seller </a> </button>
             <button class="cart" style="display: none;"> <a href="#"> Cart</a> </button>
-            <button class="cart_add_product"> <a href=""> Cart <i
-                        class="material-icons">add_shopping_cart</i></a></button>
+            <button class="cart_add_product"> <a href="cart_product.html"> Cart <i
+                        class="material-icons">shopping_cart</i></a></button>
         </div>
     </nav>
 
@@ -41,23 +42,83 @@
     <div id="card_container">
 
     </div>
-    <!-- <div class="dialog_cart"  style="display: none;">
+    <div class="dialog_cart" style="display: none;">
         <dialog id="dialog_cart" open>
-            <header class="header"> Add Product </header>
-            <section class="section">
-                <label class="l1"> Product Picture: </label>
-                <input id="" type="text" placeholder="Image product (url)" />
+            <header class="header_cart">
+                <p> Detail Product </p>
+                <div class="main_btn">
+                    <button onclick="Cancel()" class="cancel"> Cancel </button>
+                    <button onclick="paynow()" class="paynow"><a href="cart_product.html"
+                            style="text-decoration: none; color:white; "> Add Cart </a></button>
+                </div>
+            </header>
 
-                <label> Product Name: </label>
-                <input id="" type="text" placeholder="Name product" />
+            <section class="section_card">
 
-                <label> Product Price: </label>
-                <input id="" type="text" placeholder="Price product" />
+                <!-- use for add detail -->
+                <!-- <div class="section_card_left"> -->
+                <!-- 
+                        - price 
+                        - size 
+                        - text detail
+                     -->
+
+                <!-- </div>  -->
+
+                <!-- use for add img -->
+                <!-- <div class="section_card_right"> -->
+
+                <!-- </div> -->
+
+
             </section>
         </dialog>
-    </div> -->
+    </div>
 
-  
+    <div class="dialog_pay">
+        <dialog id="dialog_pay" open>
+            <header class="header_pay"></header>
+
+        </dialog>
+    </div>
+
+    <footer>
+        <h2 id="about-us"> About Us </h2>
+        <div class="contact">
+
+            <div class="foot-social">
+                <h3> Social: </h3>
+                <ul>
+                    <li> <strong>Facebook:</strong> Net Se</li>
+                    <li><strong>Phone number:</strong> 067-340-156</li>
+                    <li><strong>Telegram: </strong>067-340-156</li>
+                    <div class="foot-icon">
+                        <i class="material-icons">store</i>
+                        <i class="material-icons">email</i>
+                        <i class="material-icons">language</i>
+                        <i class="material-icons">send</i>
+                        <i class="material-icons">share</i>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="foot-link">
+                <div class="location-text">
+                    <h3><strong>Location:</strong><br> BP 511, Phum Tropeang Chhuk (Borey Sorla) Sangtak, Street 371,
+                        Phnom
+                        Penh</h3> <br>
+                </div>
+                <div class="location-link">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15636.055632678006!2d104.8830836!3d11.5508598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x171e0b69c7c6f7ba!2sPasserelles%20num%C3%A9riques%20Cambodia%20(PNC)!5e0!3m2!1sen!2skh!4v1669682957945!5m2!1sen!2skh"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
 <script src="customer.js"></script>
 

@@ -7,19 +7,15 @@ body {
     font-family: sans-serif;
     width: 100%;
     height: 100vh;
-
 }
 
-/*  ====================== Prodoct style ========================== */
+/*  ====================== Product style ========================== */
 
 nav {
     width: 100%;
     height: 13vh;
-    /* position: fixed; */
-    /* z-index: 30px; */
     display: flex;
     justify-content: space-between;
-
     background: #000000;
     box-shadow: #70030de2 0px 25px 20px -20px;
 }
@@ -51,7 +47,6 @@ nav {
 
 .seller {
     background: #e00ca4;
-
 }
 
 .cart {
@@ -70,8 +65,9 @@ nav {
     padding: 6px;
     text-decoration: none;
 }
+
 .cart_add_product {
-    background:rgb(203, 140, 24);
+    background: rgb(203, 140, 24);
     font-size: 20px;
     padding: 10px 15px 10px 15px;
     border-radius: 8px;
@@ -79,6 +75,7 @@ nav {
     margin-top: 17px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
+
 .cart_add_product a {
     color: white;
     text-decoration: none;
@@ -88,7 +85,6 @@ nav {
     box-shadow: rgb(232, 239, 22) 0px 4px 16px, rgb(128, 227, 7) 0px 8px 24px, rgb(8, 232, 34) 0px 16px 56px;
     border: none;
     cursor: pointer;
-
 }
 
 #product-create {
@@ -96,13 +92,13 @@ nav {
     background: orange;
     color: #fff;
     font-size: 17px;
-    margin: 25px 10px 10px 10px ;
+    margin: 25px 10px 10px 10px;
     border: none;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-
 }
+
 .product_title h1 {
     padding: 10px;
     color: #e00ca4;
@@ -111,11 +107,9 @@ nav {
     align-items: center;
 }
 
+/* ----------------------------dialog ---------------------------- */
 
-
-/* dialog ---------------------------- */
-
-dialog {
+.dialog_add {
     position: fixed;
     top: 10vh;
     left: 20%;
@@ -127,9 +121,10 @@ dialog {
     padding: 0;
     margin: 0;
     overflow: hidden;
+
 }
 
-dialog > header {
+.header_add {
     background-color: #e00ca4;
     color: white;
     font-size: 1.25rem;
@@ -137,45 +132,47 @@ dialog > header {
     padding: 1rem;
 }
 
-dialog > section {
+.section_add {
     padding: 1rem;
 }
 
-dialog > menu {
+.menu_add {
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
     margin: 0;
 }
 
-dialog > label {
+.label_add {
     font-weight: bold;
     display: block;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
-dialog input{
+#input_pic,
+#input_name,
+#input_price {
     display: block;
-    width: 100%;
+    width: 97%;
     border: 1px solid #ccc;
     font-size: 1.1rem;
     border-radius: 5px black solid;
     padding: 7px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    
-
 }
 
-#dialog menu button  {
+#cancel,
+#create {
     padding: 10px;
     margin: 1px;
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    font-size:15px;
+    font-size: 15px;
 }
+
 #dialog {
     position: fixed;
     top: 0;
@@ -191,118 +188,227 @@ dialog input{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
+
 #create {
     background: orange;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
 }
 
-/* from js disply style ---------------------------- */
+/* -------------------from js disply style ---------------------------- */
 
 #card_container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    height: 100vh;
-    /* margin:auto; */
+    height: auto 100vh;
 }
-.card{
+
+.card {
     width: 19%;
-    height: auto;
+    height: 43.5%;
     background: #df00478c;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    margin:5px ;
+    margin: 5px;
     border-radius: 10px;
 }
-.all_product{
+
+.all_product {
     color: #e00ca4;
     padding: 20px;
 }
 
 #img_pic_card:hover {
     box-shadow: rgba(234, 255, 44, 0.899) 0px 22px 70px 4px;
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
-#img_pic_card{
+
+#img_pic_card {
     display: flex;
     width: 50%;
     justify-content: center;
     height: 60%;
     margin-left: 26%;
     margin-top: 2%;
-    border-radius: 5px ;
-    
+    border-radius: 5px;
 }
-.div_button{
+
+.div_button {
     display: flex;
-    justify-content: flex-end;
-    margin-right:1% ;
+    justify-content: space-evenly;
+    margin-right: 1%;
 }
-.btn_add {
-    
+
+.btn_add,
+.btn_detail {
+
     padding: 8px;
     border-radius: 5px;
     border: none;
     font-size: 14px;
     color: #ffffff;
-    background:  #e00ca4;
+    background: #e00ca4;
 }
+
 .div_button :hover {
-    background:green;
+    background: green;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
-
 }
 
 /*  -------------table style --------------------- */
 
-.product_table{
+.product_table {
     display: flex;
     justify-content: center;
 }
-table{
+
+/*  ----------------------------Table style--------------------------- */
+table {
     width: 80%;
     border-collapse: collapse;
-    
 }
-th,td{
+
+th,
+td {
     border: 3px rgb(209, 11, 186) solid;
     text-align: center;
-   
-    
-}
-tr{
-    background: #b9b9b92c;
 }
 
-.img-edit, .img-delete {
+tr {
+    background: #8987872c;
+}
+
+.img-edit,
+.img-delete {
     width: 30px;
 }
-.img_pic{
-    width: 150px;
+
+/*  Img pic in table style ------------------------------ */
+.img_pic {
+    width: 100px;
+    border-radius: 10px;
+
 }
 
-/*  ----------Customer dialog ---------- */
-
-
+/*  --------------------Customer dialog ----------------- */
 .dialog_cart {
     position: fixed;
-    top: 10vh;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.805);
+    z-index: 10;
+}
+
+#dialog_cart {
+    position: fixed;
+    top: 20vh;
     left: 20%;
     width: 60%;
-    z-index: 100;
+    height: 60vh;
+    z-index: 200;
     border-radius: 12px;
     border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 2px 8px #242323fa;
     padding: 0;
     margin: 0;
     overflow: hidden;
 }
-.dialog_cart .header {
-    background-color: #e00ca4;
-    color: white;
-    font-size: 1.25rem;
+
+.header_cart {
     width: 100%;
-    padding: 1rem;
+    background: #e00ca4;
+    height: 8vh;
+}
+
+.header_cart p  {
+    padding-top: 20px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+}
+.main_btn {
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.header_cart{
+    display: flex;
+    justify-content: space-between;
+}
+.section_card {
+    display: flex;
+    justify-content: space-between;
 }
 
 
+.section_card_left{
+    margin: 10px;
+    width: 200rem;
+}
+.section_card_right {
+    margin: 10px;
+}
+#pic_input {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin-top: 5%;
+    border-radius: 5px;
+
+}
+/*  display style of choice ------------- */
+.chioce_select{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cancel,
+.paynow {
+
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    margin: 5px;
+    box-shadow: #32325dc3 0px 50px 100px -20px, #312e2e4d 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
+}
+
+.cancel {
+
+    background-color: #1100fd;
+}
+
+.paynow {
+    background-color: orange;
+}
+
+
+
+/*  -----------footer style ----------------- */
+footer {
+    background: #f39edf45;
+}
+#about-us {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+.foot-social ul li {
+    list-style-type: none;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.location-link iframe {
+    width: 40rem;
+    height: 10rem;
+}

@@ -56,7 +56,7 @@ function renderProduct() {
         let tr = document.createElement("tr");
         tr.className = "tr_body";
         tr.dataset.index = index;
-
+        // console.log(tr)
         let t_name = document.createElement("td");
         t_name.textContent = newProduct.name;
         tr.appendChild(t_name);
@@ -100,23 +100,24 @@ function renderProduct() {
 
 
 function createProduct() {
-    document.querySelector("#create").textContent = "Create";
     hide(dialog);
-
-    let newListProduct = {};
-
+    
+    let newListProduct = {} ;
+    
     let input_pic = document.querySelector("#input_pic");
     let input_name = document.querySelector("#input_name");
     let input_price = document.querySelector("#input_price");
-
+    
     newListProduct.img = input_pic.value;
     newListProduct.name = input_name.value;
     newListProduct.price = input_price.value;
-
-    listProducts.push(newListProduct);
+    
+    listProducts.unshift(newListProduct);
     input_pic.value = "";
     input_name.value = "";
     input_price.value = "";
+    
+
 
     saveProducts();
     renderProduct();
@@ -140,7 +141,8 @@ function editProduct(event) {
     document.querySelector("#input_pic").value = listProducts[index].img;
     document.querySelector("#input_name").value = listProducts[index].name;
     document.querySelector("#input_price").value = listProducts[index].price;
-    listProducts.splice(index, 1);
+    listProducts.splice(index,1);
+
     saveProducts();
 }
 

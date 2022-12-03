@@ -100,7 +100,7 @@ nav {
 }
 
 .product_title h1 {
-    padding: 10px;
+    /* padding: 10px; */
     color: #e00ca4;
     display: flex;
     justify-content: center;
@@ -121,7 +121,6 @@ nav {
     padding: 0;
     margin: 0;
     overflow: hidden;
-
 }
 
 .header_add {
@@ -186,7 +185,6 @@ nav {
 #cancel {
     background: #e00ca4;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
 }
 
 #create {
@@ -241,7 +239,6 @@ nav {
 
 .btn_add,
 .btn_detail {
-
     padding: 8px;
     border-radius: 5px;
     border: none;
@@ -287,7 +284,6 @@ tr {
 .img_pic {
     width: 100px;
     border-radius: 10px;
-
 }
 
 /*  --------------------Customer dialog ----------------- */
@@ -322,34 +318,39 @@ tr {
     height: 8vh;
 }
 
-.header_cart p  {
+.header_cart p {
     padding-top: 20px;
     padding-left: 15px;
     font-weight: bold;
     color: #fff;
     font-size: 20px;
 }
+
 .main_btn {
     padding-top: 5px;
     padding-right: 10px;
 }
-.header_cart{
+
+.header_cart {
     display: flex;
     justify-content: space-between;
 }
+
 .section_card {
     display: flex;
     justify-content: space-between;
 }
 
 
-.section_card_left{
+.section_card_left {
     margin: 10px;
     width: 200rem;
 }
+
 .section_card_right {
     margin: 10px;
 }
+
 #pic_input {
     display: flex;
     width: 60%;
@@ -358,10 +359,10 @@ tr {
     height: 80%;
     margin-top: 5%;
     border-radius: 5px;
-
 }
+
 /*  display style of choice ------------- */
-.chioce_select{
+.chioce_select {
     padding: 10px;
     border-radius: 5px;
 }
@@ -387,12 +388,31 @@ tr {
     background-color: orange;
 }
 
+.div_sec {
+    display: flex;
+    justify-content: space-between;
+}
 
+.a_add {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+
+}
+
+#btn_add {
+    padding: 10px;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+}
 
 /*  -----------footer style ----------------- */
+
 footer {
     background: #f39edf45;
 }
+
 #about-us {
     display: flex;
     justify-content: center;

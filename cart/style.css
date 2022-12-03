@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.div_pay {
+    width: 80%;
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.header_pay {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 10vh;
+    background-color: #e00ca4;
+}
+
+.header_pay h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: -35px;
+    color: #fff;
+}
+
+.main_pay {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu_pay {
+    background: #d7d7d7;
+    width: 20%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.img_order {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 10px;
+
+}
+
+.btn_remove {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    color: #fff;
+}
+
+.back {
+    padding: 10px;
+    margin: 15px 0px 0px 15px;
+    background: orange;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

@@ -7,11 +7,11 @@ let table = document.querySelector("table");
 
 let listProducts = [
     {
-        "img": "https://cdn-images.buyma.com/imgdata/item/210128/0064123360/322883442/428.jpg",
-        "price": "10$",
+        "img": "https://ih1.redbubble.net/image.3221355858.8748/ssrco,classic_tee,mens,101010:01c5ca27c6,front_alt,square_product,600x600.u1.jpg",
+        "price": "10",
         "name": "T-Shirt",
+        "buy": 0,
     },
-
 
 ]
 
@@ -82,11 +82,12 @@ function renderProduct() {
         tr.appendChild(t_edit)
 
         let t_delete = document.createElement("td");
-        let img_delete = document.createElement("img");
+        var img_delete = document.createElement("img");
         img_delete.className = "img-delete";
         img_delete.src = "../img/trash.png";
 
-        img_delete.addEventListener("click", removeProduct)
+        // img_delete.addEventListener("click", alertDialog);
+        img_delete.addEventListener("click", removeProduct);
 
         t_delete.appendChild(img_delete);
         tr.appendChild(t_delete);
@@ -101,23 +102,22 @@ function renderProduct() {
 
 function createProduct() {
     hide(dialog);
-    
-    let newListProduct = {} ;
-    
+
+    let newListProduct = {};
+
     let input_pic = document.querySelector("#input_pic");
     let input_name = document.querySelector("#input_name");
     let input_price = document.querySelector("#input_price");
-    
+
     newListProduct.img = input_pic.value;
+    newListProduct.buy = 0;
     newListProduct.name = input_name.value;
     newListProduct.price = input_price.value;
-    
+
     listProducts.unshift(newListProduct);
     input_pic.value = "";
     input_name.value = "";
     input_price.value = "";
-    
-
 
     saveProducts();
     renderProduct();
@@ -127,10 +127,14 @@ function createProduct() {
 function removeProduct(event) {
     let index = event.target.parentElement.parentElement.dataset.index;
     listProducts.splice(index, 1);
-
     saveProducts();
     renderProduct();
 }
+
+
+
+
+
 
 function editProduct(event) {
     show(dialog);
@@ -141,9 +145,9 @@ function editProduct(event) {
     document.querySelector("#input_pic").value = listProducts[index].img;
     document.querySelector("#input_name").value = listProducts[index].name;
     document.querySelector("#input_price").value = listProducts[index].price;
-    listProducts.splice(index,1);
-
+    listProducts.splice(index, 1);
     saveProducts();
+    removeProduct();
 }
 
 function addProduct() {

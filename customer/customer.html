@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="style.css">
     <title> E-Commerce Customer Page </title>
 </head>
 
@@ -28,13 +27,13 @@
 
             <button class="seller" style=" display:none; "> <a href="../seller/index.html"> Seller </a> </button>
             <button class="cart" style="display: none;"> <a href="#"> Cart</a> </button>
-            <button class="cart_add_product"> <a href="cart_product.html"> Cart <i
+            <button class="cart_add_product"> <a href="../cart/cart_product.html"> Cart <i
                         class="material-icons">shopping_cart</i></a></button>
         </div>
     </nav>
 
     <div class="card_dialog">
-
+        
     </div>
     <div class="customer-product" style="display: flex; justify-content:center; padding-top:3.5rem;">
         <h1 class="all_product"> All Products </h1>
@@ -48,40 +47,15 @@
                 <p> Detail Product </p>
                 <div class="main_btn">
                     <button onclick="Cancel()" class="cancel"> Cancel </button>
-                    <button onclick="paynow()" class="paynow"><a href="cart_product.html"
-                            style="text-decoration: none; color:white; "> Add Cart </a></button>
+                    <button onclick="paynow()" class="paynow" style="display: none;"><a href="../cart/cart_product.html" 
+                            style="text-decoration: none; color:white;"> Add Cart </a></button>
                 </div>
             </header>
-
             <section class="section_card">
-
-                <!-- use for add detail -->
-                <!-- <div class="section_card_left"> -->
-                <!-- 
-                        - price 
-                        - size 
-                        - text detail
-                     -->
-
-                <!-- </div>  -->
-
-                <!-- use for add img -->
-                <!-- <div class="section_card_right"> -->
-
-                <!-- </div> -->
-
 
             </section>
         </dialog>
     </div>
-
-    <div class="dialog_pay">
-        <dialog id="dialog_pay" open>
-            <header class="header_pay"></header>
-
-        </dialog>
-    </div>
-
     <footer>
         <h2 id="about-us"> About Us </h2>
         <div class="contact">
@@ -101,7 +75,6 @@
                     </div>
                 </ul>
             </div>
-
             <div class="foot-link">
                 <div class="location-text">
                     <h3><strong>Location:</strong><br> BP 511, Phum Tropeang Chhuk (Borey Sorla) Sangtak, Street 371,
@@ -117,9 +90,6 @@
             </div>
         </div>
     </footer>
-
-
 </body>
 <script src="customer.js"></script>
-
 </html>

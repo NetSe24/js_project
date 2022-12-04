@@ -1,4 +1,3 @@
-// let listOrder = [] ;
 
 function saveOrder() {
     localStorage.setItem("listOrder", JSON.stringify(listOrder));
@@ -22,7 +21,7 @@ function displayProduct() {
     loadOrder()
     let valuePrice = 0;
     for (index = 0; index < listOrder.length; index++) {
-        valuePrice += (parseInt(listOrder[index].priceOrder));
+        valuePrice += (parseFloat(listOrder[index].priceOrder));
 
         if (oldMenu_pay !== null) {
             oldMenu_pay.remove();
